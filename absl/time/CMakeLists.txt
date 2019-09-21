@@ -83,9 +83,11 @@ absl_cc_library(
     "internal/cctz/src/zone_info_source.cc"
   COPTS
     ${ABSL_DEFAULT_COPTS}
-  DEPS
-    $<$<PLATFORM_ID:Darwin>:${CoreFoundation}>
 )
+
+if(APPLE)
+  target_link_options(time_zone PUBLIC -framework CoreFoundation)
+endif()
 
 # Internal-only target, do not depend on directly.
 absl_cc_library(
