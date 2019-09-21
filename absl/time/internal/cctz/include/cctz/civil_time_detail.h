@@ -15,6 +15,10 @@
 #ifndef ABSL_TIME_INTERNAL_CCTZ_CIVIL_TIME_DETAIL_H_
 #define ABSL_TIME_INTERNAL_CCTZ_CIVIL_TIME_DETAIL_H_
 
+#ifdef __APPLE__
+#define _DARWIN_C_SOURCE
+#endif
+
 #include <cstdint>
 #include <limits>
 #include <ostream>
