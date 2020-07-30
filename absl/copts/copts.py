@@ -173,10 +173,7 @@ COPT_VARS = {
             "/wd4996",  # use of deprecated symbol
             "/DNOMINMAX",  # disable the min() and max() macros from <windows.h>
         ],
-    "ABSL_MSVC_LINKOPTS": [
-        # Object file doesn't export any previously undefined symbols
-        "-ignore:4221",
-    ],
+    "ABSL_MSVC_LINKOPTS": [],
     # "HWAES" is an abbreviation for "hardware AES" (AES - Advanced Encryption
     # Standard). These flags are used for detecting whether or not the target
     # architecture has hardware support for AES instructions which can be used
