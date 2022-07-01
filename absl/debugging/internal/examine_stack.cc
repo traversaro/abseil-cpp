@@ -26,6 +26,10 @@
 #include <sys/mman.h>
 #endif
 
+#if defined(MAP_ANON) && !defined(MAP_ANONYMOUS)
+#define MAP_ANONYMOUS MAP_ANON
+#endif
+
 #if defined(__linux__) || defined(__APPLE__)
 #include <sys/ucontext.h>
 #endif
